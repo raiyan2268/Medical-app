@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctors List</title>
+    <link rel="stylesheet" href="Doctors.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+    
+    <nav class="sidebar">
+        <div class ="logo-menu">
+            <h2 class="logo">Dia-Health360</h2>
+            <i class='bx bx-menu toggle-btn'></i>
+        </div>
+
+        <ul class="list">
+            <li class="list-item active">
+                <a href="Dashboard.html">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="link-name" style="--i:1">Dashboard</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="PatientProfile.html">
+                    <i class='bx bx-user'></i>
+                    <span class="link-name" style="--i:2">User Profile</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bx-hotel' ></i>
+                    <span class="link-name" style="--i:3">Facilities</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bx-donate-heart'></i>
+                    <span class="link-name" style="--i:4">Diagnosis</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bx-line-chart-down'></i>
+                    <span class="link-name" style="--i:5">Risk Assesment</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bx-first-aid' ></i>
+                    <span class="link-name" style="--i:6">Treatment</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="Doctors.html">
+                    <i class='bx bx-list-check'></i>
+                    <span class="link-name" style="--i:7">List Of Doctor</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="#">
+                    <i class='bx bx-log-out-circle'></i>
+                    <span class="link-name" style="--i:8">Log Out</span>
+                </a>
+            </li>                                   
+
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Doctors List</h1>
+        <table id="DoctorTable">
+            <tr>
+                <th>Doctor ID</th>
+                <th>Name</th>
+                <th>Specialization</th>
+                <th>Age</th>
+                <th>Gender</th>
+                <th>Hospital Name</th>
+                <th>Email Address</th>
+                <th>Action</th>
+            </tr>
+            <tr>
+                <td id="DoctorID">0987</td>
+                <td id="name">Dr. Farhana Ahmed</td>
+                <td id="Specialist">Endocrinology </td>
+                <td id="Age">45</td>
+                <td id="gender">Female</td>
+                <td id="HospitalName">LABAID</td>
+                <td id="email">farhana.ahmed@gmail.com</td>
+                <td><button onclick="makeAppointment()">Appointment</button></td>
+            </tr>
+            <tr>
+                <td id="DoctorID">0986</td>
+                <td id="name">Dr. Mohammad Rahman</td>
+                <td id="Specialist">Cardiology</td>
+                <td id="Age">50</td>
+                <td id="gender">Male</td> 
+                <td id="HospitalName">POPULAR</td>
+                <td id="email">mohammad.rahman@gmail.com</td>
+                <td><button onclick="makeAppointment()">Appointment</button></td>
+            </tr>
+            <tr>
+                <td id="DoctorID">0985</td>
+                <td id="name">Dr. Aminul Islam</td>
+                <td id="Specialist">Orthopedics</td>
+                <td id="Age">48</td>
+                <td id="gender">Male</td>
+                <td id="HospitalName">PCLAB</td>
+                <td id="email">aminul.islam@gmail.com</td>
+                <td><button onclick="makeAppointment()">Appointment</button></td>
+            </tr>
+            <tr>
+                <td id="DoctorID">0984</td>
+                <td id="name">Dr. Nasreen Akhtar</td>
+                <td id="Specialist">Gynecology</td>
+                <td id="Age">47</td>
+                <td id="gender">Female</td>
+                <td id="HospitalName">BIRDEM</td>
+                <td id="email">nasrin.akter@gmail.com</td>
+                <td><button onclick="makeAppointment()">Appointment</button></td>
+            </tr>
+
+        </table>
+    </div>
+    <script src="script.js"> 
+            
+     </script>
+</body>
+</html>
