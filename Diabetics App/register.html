@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="wrapper">
+        <form onsubmit="return registerUser(event)">
+            <h1>Register</h1>
+            <div class="input-box">
+                <input type="text" id="regName" placeholder="Name" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="date" id="regDob" placeholder="Date of Birth" required>
+                <i class='bx bxs-calendar'></i>
+            </div>
+            <div class="input-box">
+                <input type="text" id="regAddress" placeholder="Address" required>
+                <i class='bx bxs-home'></i>
+            </div>
+            <div class="input-box">
+                <select id="regGender" required>
+                    <option value="">Select Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+                <i class='bx bxs-user'></i>
+            </div>
+            <div class="input-box">
+                <input type="tel" id="regPhone" placeholder="Phone Number" required>
+                <i class='bx bxs-phone'></i>
+            </div>
+            <div class="input-box">
+                <input type="email" id="regEmail" placeholder="Email Address" required>
+                <i class='bx bxs-envelope'></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="regPassword" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            
+            <button type="submit" class="btn">Register</button>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
