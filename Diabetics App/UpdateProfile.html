@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Profile</title>
+    <link rel="stylesheet" href="PatientProfile.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Update Profile</h1>
+        <form id="updateForm" onsubmit="return submitForm()">
+            <div class="form-row">
+                <div class="form-column">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" required>
+                </div>
+                <div class="form-column">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" required>
+                    <label for="phone">Phone Number:</label>
+                    <input type="text" id="phone" required>
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" required>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+            // Load data from local storage and populate the form
+            document.getElementById("name").value = localStorage.getItem("name");
+            document.getElementById("gender").value = localStorage.getItem("gender");
+            document.getElementById("dob").value = localStorage.getItem("dob");
+            document.getElementById("address").value = localStorage.getItem("address");
+            document.getElementById("phone").value = localStorage.getItem("phone");
+            document.getElementById("email").value = localStorage.getItem("email");
+        });
+
+        function submitForm() {
+            // Save updated data to local storage
+            localStorage.setItem("name", document.getElementById("name").value);
+            localStorage.setItem("gender", document.getElementById("gender").value);
+            localStorage.setItem("dob", document.getElementById("dob").value);
+            localStorage.setItem("address", document.getElementById("address").value);
+            localStorage.setItem("phone", document.getElementById("phone").value);
+            localStorage.setItem("email", document.getElementById("email").value);
+
+            alert("Profile updated successfully!");
+
+            // Redirect back to the patient profile page after alert
+            setTimeout(function() {
+                window.location.href = "PatientProfile.html";
+            }, 0);
+
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>
